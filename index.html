@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HỆ THỐNG TRA CỨU PHÒNG THI</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="header">
+
+        <div class="logo">
+            <img src="./logo.png" alt="Logo trường">
+        </div>
+
+        <div class="title">
+            <h1>HỆ THỐNG TRA CỨU PHÒNG THI</h1>
+            <p>THPT NGUYỄN VIỆT HỒNG</p>
+            <p class="exam-name">HK1-25-26</p>
+        </div>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Nhập số báo danh hoặc họ và tên"
+            autocomplete="off"
+        >
+
+        <button id="searchBtn" type="button">Tra cứu</button>
+
+    </div>
+
+    <div class="hint">
+        Gợi ý: Nhập số báo danh hoặc họ và tên học sinh.
+    </div>
+
+    <div id="result"></div>
+
+    <div class="footer">
+        © ngoloc&phula
+    </div>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+:root{
+    --primary:#0b5ed7;
+    --primary-dark:#084298;
+    --card:#fff;
+    --muted:#64748b;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+
+    font-family:Inter,sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #e0f2fe,
+        #f8fafc
+    );
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.app{
+
+    max-width:560px;
+
+    width:100%;
+
+    background:var(--card);
+
+    border-radius:22px;
+
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+    padding:28px;
+
+}
+
+.header{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-bottom:20px;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:14px;
+
+    background:#e0e7ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.logo img{
+
+    width:44px;
+
+    height:44px;
+
+    object-fit:contain;
+
+}
+
+.title h1{
+
+    margin:0;
+
+    font-size:20px;
+
+}
+
+.title p{
+
+    margin:2px 0 0;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   TÊN KỲ THI
+   ========================================== */
+
+.title .exam-name{
+
+    margin:4px 0 0;
+
+    color:var(--primary-dark);
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #c7d2fe;
+
+}
+
+.search-box button{
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+.hint{
+
+    font-size:13px;
+
+    color:var(--muted);
+
+    margin:10px 0;
+
+}
+
+.card{
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:18px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:#dbeafe;
+
+    color:#084298;
+
+    font-size:12px;
+
+    margin-bottom:10px;
+
+}
+
+/* TÊN HỌC SINH VÀ LỚP */
+
+.student-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 8px 0 20px;
+}
+
+.student-heading h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.class-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #075985;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 16px;
+    align-items: start;
+}
+
+.item {
+    min-width: 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.exam-time {
+    margin-top: 4px;
+    line-height: 1.6;
+}
+
+.item{
+
+    font-size:14px;
+
+}
+
+.item span{
+
+    color:var(--muted);
+
+}
+
+.not-found{
+
+    text-align:center;
+
+    color:#dc2626;
+
+    padding:10px;
+
+}
+
+.footer{
+
+    text-align:center;
+
+    font-size:12px;
+
+    color:var(--muted);
+
+    margin-top:20px;
+
+}
+/* ==========================================
+   GIAO DIỆN CHỌN HỌC SINH TRÙNG HỌ TÊN
+   ========================================== */
+
+.duplicate-card {
+    padding: 24px;
+}
+
+.duplicate-heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.duplicate-heading h2 {
+    margin: 0 0 10px;
+    color: #172033;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.duplicate-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.student-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.student-choice {
+    width: 100%;
+    padding: 20px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #fff;
+    color: #172033;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.student-choice:hover {
+    background: #f8fbff;
+    border-color: #93c5fd;
+}
+
+.student-choice:focus-visible {
+    outline: 2px solid #0b5ed7;
+    outline-offset: 3px;
+}
+
+.choice-info {
+    width: 100%;
+}
+
+.choice-name {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.choice-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.choice-separator {
+    color: #94a3b8;
+}
+
+/* Tối ưu điện thoại */
+
+@media (max-width: 480px) {
+    .duplicate-card {
+        padding: 16px;
+    }
+
+    .duplicate-heading h2 {
+        font-size: 18px;
+    }
+
+    .duplicate-heading p {
+        font-size: 13px;
+    }
+
+    .student-choice {
+        padding: 18px 10px;
+    }
+
+    .choice-name {
+        font-size: 15px;
+    }
+}
